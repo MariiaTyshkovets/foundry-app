@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/foundry-app/static/css/main.e80ac2af.css",
+    "main.js": "/foundry-app/static/js/main.37e5e5f5.js",
+    "static/js/787.76e51f25.chunk.js": "/foundry-app/static/js/787.76e51f25.chunk.js",
+    "index.html": "/foundry-app/index.html",
+    "main.e80ac2af.css.map": "/foundry-app/static/css/main.e80ac2af.css.map",
+    "main.37e5e5f5.js.map": "/foundry-app/static/js/main.37e5e5f5.js.map",
+    "787.76e51f25.chunk.js.map": "/foundry-app/static/js/787.76e51f25.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e80ac2af.css",
+    "static/js/main.37e5e5f5.js"
+  ]
+}

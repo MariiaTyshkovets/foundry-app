@@ -1,7 +1,7 @@
 [
     {
         "id": 0,
-        "name": "сталь",
+        "name": "Cталь, 0.3% C",
         "liquidusTemperature": 1770,
         "solidusTemperature": 1720,
         "Q": 258,
@@ -22,7 +22,7 @@
     },
     {
         "id": 1,
-        "name": "чавун",
+        "name": "Чавун, 3.8% С",
         "liquidusTemperature": 1473,
         "solidusTemperature": 1403,
         "Q": 215,
@@ -43,7 +43,7 @@
     },
     {
         "id": 2,
-        "name": "латунь",
+        "name": "Латунь, 10% Zn",
         "liquidusTemperature": 1320,
         "solidusTemperature": 1305,
         "Q": 221,
@@ -64,7 +64,7 @@
     },
     {
         "id": 3,
-        "name": "бронза",
+        "name": "Бронза, 10% Sn",
         "liquidusTemperature": 1260,
         "solidusTemperature": 1100,
         "Q": 257,
@@ -85,7 +85,7 @@
     },
     {
         "id": 4,
-        "name": "силумін",
+        "name": "Силумін, 13% Si",
         "liquidusTemperature": 870,
         "solidusTemperature": 840,
         "Q": 365,
@@ -106,7 +106,7 @@
     },
     {
         "id": 5,
-        "name": "Al-Cu",
+        "name": "Al-Cu сплав",
         "liquidusTemperature": 910,
         "solidusTemperature": 780,
         "Q": 360,

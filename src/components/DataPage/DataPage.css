@@ -1,0 +1,35 @@
+.data-page {
+    color: #525252;
+}
+
+.data-page .section {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.data-page h2 {
+    font-weight: 400;
+}
+
+table tr {
+    font-weight: 500;
+}
+
+table td {
+    padding: 4px 7px;
+}
+
+table, tr, td {
+    border: 2px solid white;
+    border-collapse: collapse;
+}
+
+tr, td {
+    background-color: rgb(9, 84, 132, 0.09);
+}
+
+/* .vertical {
+    writing-mode:vertical-lr;
+    transform: rotate(180deg);
+} */

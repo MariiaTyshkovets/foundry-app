@@ -1,13 +1,9 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import './Main.css';
 
 import alloys from "../../alloysProperty.json";
 
 const Main = () => {
-
-    useEffect(() => {
-        console.log(formData);
-    })
 
     let initialForm = {
         coolingTemp: "",

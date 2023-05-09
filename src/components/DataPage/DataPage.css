@@ -26,11 +26,14 @@ h2 {
     max-width: 560px;
 }
 
-.text {
+.section .text {
     display: flex;
     align-items: flex-start;
     flex-direction: column;
+}
 
+#secondText, #thirdText {
+    align-self: flex-start;
 }
 
 table tr {
@@ -42,6 +45,7 @@ table td {
 }
 
 table, tr, td {
+    text-align: center;
     border: 2px solid white;
     border-collapse: collapse;
 }

@@ -50,14 +50,21 @@ function DataPage() {
         <div className='image formulas'>
           <img src={require("../../assets/images/formulas.jpg")} alt="formulas Balandina"/>
         </div>
-        <p className='text'>
+        <p className='text' id='secondText'>
           <span>де <b>k</b> = 1 для циліндра, <b>k</b> = 2 для кулі;</span>
           <span><b>С<sub>ф</sub></b> - теплоємність форми, Дж/(кг*К);</span>
           <span><b>C<sub>т</sub></b> і <b>C<sub>р</sub></b> - теплоємність сплаву відповідно в твердому і рідкому стані, Дж/(кг*К);</span>
           <span><b>&#961;<sub>т</sub></b> і <b>&#961;<sub>р</sub></b> - густина сплаву відповідно в твердому і рідкому стані, кг/м<sup>3</sup>;</span>
           <span><b>&#961;<sub>ф</sub></b> - густина форми, кг/м<sup>3</sup>;</span>
-          <span><b>Т<sub>с</sub></b> - температура солідусу сплаву, К.</span>
-          <span></span>
+          <span><b>Т<sub>с</sub></b> - температура солідусу сплаву, К.</span><br />
+          <span>Для визначення часу охолодження у формі (у секундах) уже затверділого виливка до температури вибивання Т<sub>в</sub> Баландін Г.Ф. запропонував такі формули:</span>
+        </p>
+        <div className='image formulas'>
+          <img src={require("../../assets/images/formulas3.jpg")} alt="formulas Balandina"/>
+        </div>
+        <p className='text' id='thirdText'>
+          <span>де <b>T<sub>в</sub></b> - температура виливка при вибиванні, K;</span>
+          <span><b>n</b> - показник ступеня параболи, якою описується температурне поле у формі; n = 2...3 (найчастіше має значення 2.75).</span>
         </p>
       </section>
       <section className='section'>

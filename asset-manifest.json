@@ -1,15 +1,17 @@
 {
   "files": {
-    "main.css": "/foundry-app/static/css/main.c2e23a95.css",
-    "main.js": "/foundry-app/static/js/main.a173b57e.js",
+    "main.css": "/foundry-app/static/css/main.128cb6c2.css",
+    "main.js": "/foundry-app/static/js/main.a65fa874.js",
     "static/js/787.76e51f25.chunk.js": "/foundry-app/static/js/787.76e51f25.chunk.js",
+    "static/media/formulas.jpg": "/foundry-app/static/media/formulas.3051785034331e35dbfc.jpg",
+    "static/media/formula.jpg": "/foundry-app/static/media/formula.6bea368836b91fb9a4b7.jpg",
     "index.html": "/foundry-app/index.html",
-    "main.c2e23a95.css.map": "/foundry-app/static/css/main.c2e23a95.css.map",
-    "main.a173b57e.js.map": "/foundry-app/static/js/main.a173b57e.js.map",
+    "main.128cb6c2.css.map": "/foundry-app/static/css/main.128cb6c2.css.map",
+    "main.a65fa874.js.map": "/foundry-app/static/js/main.a65fa874.js.map",
     "787.76e51f25.chunk.js.map": "/foundry-app/static/js/787.76e51f25.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c2e23a95.css",
-    "static/js/main.a173b57e.js"
+    "static/css/main.128cb6c2.css",
+    "static/js/main.a65fa874.js"
   ]
 }

@@ -108,3 +108,15 @@ button {
 button:hover {
     background-color: #0666a3;
 }
+
+@media screen and (max-width: 768px) {
+    .form {
+        padding: 30px;
+    }   
+}
+
+@media screen and (max-width: 480px) {
+    .form {
+        padding: 20px;
+    }   
+}

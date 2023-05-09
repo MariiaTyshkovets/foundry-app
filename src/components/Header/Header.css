@@ -43,3 +43,14 @@ nav {
     color: rgb(245, 197, 24);
     text-shadow: 3px 3px 3px rgba(49, 22, 14, 0.7);
 }
+  
+@media screen and (max-width: 480px) {
+    .nav-list {
+        font-size: 16px;
+        gap: 10px;
+    }   
+
+    h1 {
+        font-size: 24px;
+    }
+}

@@ -20,8 +20,13 @@ function Header() {
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink key="index" to={"/foundry-app/data"} style={({ isActive }) => isActive ?  activeStyle : undefined}>
+                        <NavLink key="data" to={"/foundry-app/data"} style={({ isActive }) => isActive ?  activeStyle : undefined}>
                             Довідкові дані
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink key="results" to={"/foundry-app/results"} style={({ isActive }) => isActive ?  activeStyle : undefined}>
+                            Результати
                         </NavLink>
                     </li>
                 </ul>

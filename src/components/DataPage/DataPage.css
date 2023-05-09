@@ -6,10 +6,31 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    padding: 20px 40px;
 }
 
-.data-page h2 {
+h2 {
     font-weight: 400;
+}
+
+.image {
+    max-width: 400px;
+}
+
+.image img {
+    width: 100%;
+    height: auto;
+}
+
+.formulas {
+    max-width: 560px;
+}
+
+.text {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+
 }
 
 table tr {

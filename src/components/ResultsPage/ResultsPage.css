@@ -1,0 +1,10 @@
+.results-page {
+    color: #525252;
+    padding: 20px;
+}
+
+.results {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}

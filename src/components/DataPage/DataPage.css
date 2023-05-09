@@ -11,6 +11,7 @@
 
 h2 {
     font-weight: 400;
+    text-align: center;
 }
 
 .image {
@@ -36,6 +37,16 @@ h2 {
     align-self: flex-start;
 }
 
+.big-table {
+    width: calc(100vw - 92px);
+    overflow-x:auto;
+    scroll-behavior: smooth;
+}
+
+table {
+    width: 100%;
+}
+
 table tr {
     font-weight: 500;
 }
@@ -58,3 +69,27 @@ tr, td {
     writing-mode:vertical-lr;
     transform: rotate(180deg);
 } */
+
+@media screen and (max-width: 768px) {
+    .data-page .section {
+        padding: 20px;
+    }
+
+    .big-table {
+        width: calc(100vw - 60px);
+    }
+}
+  
+@media screen and (max-width: 480px) {
+    .data-page .section {
+        padding: 20px 10px;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    .big-table {
+        width: calc(100vw - 40px);
+    }
+}

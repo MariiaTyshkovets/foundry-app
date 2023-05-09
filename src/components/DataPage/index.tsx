@@ -85,32 +85,34 @@ function DataPage() {
           </tbody>
         </table>
         <h2>Теплофізичні властивості ливарних сплавів у рідкому і твердому станах</h2>
-        <table id='referenceData'>
-          <thead>
-            <tr>
-              {headings.map((item, num) => <td className='vertical' key={num}>{item}</td>)}
-            </tr>
-          </thead>
-          <tbody>
-            {prop.map((alloy, index) => <tr key={index}>
-              <td>{alloy.name}</td>
-              <td>{alloy.solidusTemperature}</td>
-              <td>{alloy.liquidusTemperature}</td>
-              <td>{alloy.Q}</td>
-              <td>{alloy.effectiveQ}</td>
-              <td>{alloy.solidDensity}</td>
-              <td>{alloy.liquidDensity}</td>
-              <td>{alloy.solidHeatCapacity}</td>
-              <td>{alloy.liquidHeatCapacity}</td>
-              <td>{alloy.solidThermalConductivity}</td>
-              <td>{alloy.liquidThermalConductivity}</td>
-              <td>{alloy.solidHeatAccumulatingCapacity}</td>
-              <td>{alloy.liquidHeatAccumulatingCapacity}</td>
-              <td>{alloy.solidTemperatureConductivity}</td>
-              <td>{alloy.liquidTemperatureConductivity}</td>
-            </tr>)}
-          </tbody>
-        </table>
+        <div className='big-table'>
+          <table id='referenceData'>
+            <thead>
+              <tr>
+                {headings.map((item, num) => <td className='vertical' key={num}>{item}</td>)}
+              </tr>
+            </thead>
+            <tbody>
+              {prop.map((alloy, index) => <tr key={index}>
+                <td>{alloy.name}</td>
+                <td>{alloy.solidusTemperature}</td>
+                <td>{alloy.liquidusTemperature}</td>
+                <td>{alloy.Q}</td>
+                <td>{alloy.effectiveQ}</td>
+                <td>{alloy.solidDensity}</td>
+                <td>{alloy.liquidDensity}</td>
+                <td>{alloy.solidHeatCapacity}</td>
+                <td>{alloy.liquidHeatCapacity}</td>
+                <td>{alloy.solidThermalConductivity}</td>
+                <td>{alloy.liquidThermalConductivity}</td>
+                <td>{alloy.solidHeatAccumulatingCapacity}</td>
+                <td>{alloy.liquidHeatAccumulatingCapacity}</td>
+                <td>{alloy.solidTemperatureConductivity}</td>
+                <td>{alloy.liquidTemperatureConductivity}</td>
+              </tr>)}
+            </tbody>
+          </table>
+        </div>
       </section>
     </main>
   );

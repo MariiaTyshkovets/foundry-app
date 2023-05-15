@@ -1,4 +1,5 @@
 .results-page {
+    min-height: 85vh;
     color: #525252;
     padding: 20px;
 }

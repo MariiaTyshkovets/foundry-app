@@ -39,8 +39,13 @@ h2 {
 
 .big-table {
     width: calc(100vw - 92px);
-    overflow-x:auto;
+    overflow-x: auto;
+    overflow-y: hidden;
     scroll-behavior: smooth;
+}
+
+.tables {
+    margin-bottom: 50px;
 }
 
 table {
@@ -61,8 +66,16 @@ table, tr, td {
     border-collapse: collapse;
 }
 
-tr, td {
+tr:nth-child(even) {
     background-color: rgb(9, 84, 132, 0.09);
+}
+
+tr:nth-child(odd) {
+    background-color: rgb(9, 84, 132, 0.04);
+}
+
+thead tr:nth-child(odd) {
+    background-color: rgb(9, 84, 132, 0.12);
 }
 
 /* .vertical {

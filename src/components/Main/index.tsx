@@ -2,6 +2,10 @@ import { useState } from 'react';
 import './Main.css';
 
 import alloys from "../../alloysProperty.json";
+import { Alloy } from '../../types/interfaces';
+import { addDoc, collection } from 'firebase/firestore';
+import { firestore } from '../../services/firebase';
+import { collection_name } from '../../services/results';
 
 const Main = () => {
 
@@ -15,36 +19,15 @@ const Main = () => {
     }
 
     const [formData, setFormData] = useState(initialForm);
-
     const [result, setResult] = useState({
         miu: "",
         hardeningTimeSeconds: "",
-        coolingTimeSeconds: ""
+        coolingTimeSeconds: "",
+        compoundRadius: ""
     });
-
     const [showResult, setShowResult] = useState(false);
 
-    interface Alloy {
-        id: number,
-        name: string,
-        liquidusTemperature: number,
-        solidusTemperature: number,
-        Q: number,
-        effectiveQ: number,
-        solidDensity: number,
-        liquidDensity: number,
-        mouldDensity: number,
-        solidHeatCapacity: number,
-        liquidHeatCapacity: number,
-        mouldHeatCapasity: number,
-        solidThermalConductivity: number,
-        liquidThermalConductivity: number,
-        solidHeatAccumulatingCapacity: number,
-        liquidHeatAccumulatingCapacity: number,
-        mouldHeatAccumulatingCapacity: number,
-        solidTemperatureConductivity: number,
-        liquidTemperatureConductivity: number
-    }
+    const configuration = ["Плита", "Суцільний циліндр", "Куля"];
     
     const handleValue = (e: any) : void => {
         setFormData({...formData, [e.target.id]: e.target.value});
@@ -57,7 +40,7 @@ const Main = () => {
     const calculateHardeningAndCoolingTime = (e: any) => {
         e.preventDefault();
         let alloy = alloys.find(item => item.id === +formData.alloy);
-        
+    
         if (alloy) {
             let solidLiquidDestiny = (alloy.solidDensity + alloy.liquidDensity) / 2;
             let miu = formData.castingСonfig < 1 ? 1 : calculateMiu(alloy, solidLiquidDestiny);
@@ -68,8 +51,10 @@ const Main = () => {
             setResult({
                 miu: miu,
                 hardeningTimeSeconds: hardeningTime.toFixed(0),
-                coolingTimeSeconds: coolingTime.toFixed(0)
+                coolingTimeSeconds: coolingTime.toFixed(0),
+                compoundRadius: compoundRadius.toFixed(3)
             });
+            sendResultsData(alloy, hardeningTime, coolingTime, compoundRadius);
             handleResult();
         } 
     }
@@ -87,6 +72,21 @@ const Main = () => {
             let mui = Math.pow((1 / B) * (Math.sqrt(1 + (2 * B)) - 1), 2);
             return mui.toFixed(2);
         }
+    }
+
+    const sendResultsData = (alloy: Alloy, hardeningTime: number, coolingTime: number, compoundRadius: number) => {
+        addDoc(collection(firestore, collection_name), {
+            calculationResult: {
+                alloy: alloy.name,
+                castingConfiguration: configuration[formData.castingСonfig],
+                compoundRadius: compoundRadius.toFixed(3),
+                coolingTime: coolingTime.toFixed(0),
+                finalCoolingTemperature: formData.coolingTemp,
+                hardeningTime: hardeningTime.toFixed(0),
+                moldTemperature: formData.mouldTemp,
+                pouringTemperature: formData.pouringTemp
+            },    
+        }).catch(e => console.error("Error adding document: ", e));
     }
 
     return (
@@ -112,9 +112,7 @@ const Main = () => {
                     value={formData.castingСonfig}
                     onChange={handleValue}
                 >
-                    <option value={0}>Плита</option>
-                    <option value={1}>Суцільний циліндр</option>
-                    <option value={3}>Куля</option>
+                    {configuration.map((item, index) => <option key={index} value={index}>{item}</option>)}
                 </select>
 
                 <h4><label htmlFor='forCompoundRadius'>

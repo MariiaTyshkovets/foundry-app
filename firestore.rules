@@ -4,16 +4,16 @@ service cloud.firestore {
   match /databases/{database}/documents {
     // Allow admins to read and write all documents
     match /{document=**} {
-      allow read, write: if hasAnyRole(["ADMIN", "OWNER"]);
+      allow read, write: if hasAnyRole(["ADMIN", "OWNER", "VIEWER"]);
     }
 
     // Rowy: Allow signed in users to read Rowy configuration and admins to write
     match /_rowy_/{docId} {
       allow read: if request.auth.token.roles.size() > 0;
-      allow write: if hasAnyRole(["ADMIN", "OWNER"]);
+      allow write: if hasAnyRole(["ADMIN", "OWNER", "VIEWER"]);
     	match /{document=**} {
         allow read: if request.auth.token.roles.size() > 0;
-        allow write: if hasAnyRole(["ADMIN", "OWNER"]);
+        allow write: if hasAnyRole(["ADMIN", "OWNER", "VIEWER"]);
       }
     }
     // Rowy: Allow users to edit their settings

@@ -1,7 +1,17 @@
+import { Dispatch, SetStateAction, useState } from 'react';
 import './Header.css';
 import { NavLink } from "react-router-dom";
+import { logOut } from '../../services/firebase';
 
-function Header() {
+interface FunctionSetSignIn {
+    setSignIn: Dispatch<SetStateAction<boolean>>;
+  }
+
+function Header(prop: FunctionSetSignIn) {
+
+    const [showUserInfo, setShowUserInfo] = useState(false);
+    const name : any = localStorage.getItem("name")?.replaceAll('"',"");
+    const img : any = localStorage.getItem("profilePic")?.replaceAll('"',"");
 
     let activeStyle = {
         color: "orange"
@@ -31,6 +41,23 @@ function Header() {
                     </li>
                 </ul>
             </nav>
+            <div className='user'>
+                <div className='user-img' 
+                    onMouseOver={() => setShowUserInfo(true)} 
+                    onMouseLeave={() => setShowUserInfo(false)}
+                >
+                    <img src={img} alt={name} title={name}/>
+                </div>
+                {showUserInfo && <div className='user-info' 
+                    onMouseOver={() => setShowUserInfo(true)}
+                    onMouseLeave={() => setShowUserInfo(false)}
+                >
+                    <h4>{name}</h4>
+                    <div className='btn-container'>
+                        <button onClick={() => {logOut(); prop.setSignIn(true)}}>Log Out</button>
+                    </div>
+                </div>}
+            </div>
         </header>
     );
 }

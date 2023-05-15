@@ -1,0 +1,41 @@
+.auth {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(../../assets/images/foundry.jpg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    color: white;
+}
+
+.blur {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(5px);
+    padding: 20px;
+}
+
+.google {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    color: black;
+    width: max-content;
+    gap: 10px;
+    padding: 10px 15px 10px 10px;
+    border-radius: 10px;
+}
+
+.google:hover {
+    background-color: white;
+    box-shadow: 3px 3px 10px rgb(255, 255, 255, 0.6);
+    transform: scale(1.015);
+}
+
+.google img {
+    height: 40px;
+}

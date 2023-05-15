@@ -1,0 +1,21 @@
+export interface Alloy {
+    id: number,
+    name: string,
+    liquidusTemperature: number,
+    solidusTemperature: number,
+    Q: number,
+    effectiveQ: number,
+    solidDensity: number,
+    liquidDensity: number,
+    mouldDensity: number,
+    solidHeatCapacity: number,
+    liquidHeatCapacity: number,
+    mouldHeatCapasity: number,
+    solidThermalConductivity: number,
+    liquidThermalConductivity: number,
+    solidHeatAccumulatingCapacity: number,
+    liquidHeatAccumulatingCapacity: number,
+    mouldHeatAccumulatingCapacity: number,
+    solidTemperatureConductivity: number,
+    liquidTemperatureConductivity: number
+}

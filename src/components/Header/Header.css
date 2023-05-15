@@ -2,6 +2,7 @@
     height: 35px;
     padding: 10px 15px;
     display: flex;
+    justify-content: space-between;
     gap: 20px;
     background-color: #095484;
     box-shadow: 0 2px 5px #ccc;
@@ -42,6 +43,30 @@ nav {
 .nav-list li:hover {
     color: rgb(245, 197, 24);
     text-shadow: 3px 3px 3px rgba(49, 22, 14, 0.7);
+}
+
+.user {
+    position: relative;
+}
+
+.user-img img {
+    height: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.user-info {
+    position: absolute;
+    right: -15px;
+    padding: 20px;
+    height: fit-content;
+    background-color: rgb(235, 242, 247);
+    box-shadow: 0 2px 5px #ccc;
+    border-top: #095484 7px solid;
+}
+
+.user-info h4 {
+    text-align: center;
 }
   
 @media screen and (max-width: 480px) {

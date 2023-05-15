@@ -6,21 +6,45 @@ import Footer from './components/Footer';
 import DataPage from './components/DataPage';
 import NotFoundPage from './components/NotFoundPage';
 import ResultsPage from './components/ResultsPage';
+import { useEffect, useState } from "react";
+import Auth from "./components/Auth";
 
 function App() {
+  const [signIn, setSignIn] = useState(true);
+
+  useEffect(() => {
+    let name = localStorage.getItem("name");
+    let email = localStorage.getItem("email");
+    let img = localStorage.getItem("profilePic");
+
+    if (name !== null && email !== null && img !== null) {
+      setSignIn(false);
+    } else {
+      setSignIn(true);
+    }
+  }, [signIn]);
 
   return (
     <div className="App">
-      <Header />
-        <Routes>
-          <Route path="/foundry-app/">
-            <Route path='' element={<Main />}/>
-            <Route path="data" element={<DataPage />}/>
-            <Route path="results" element={<ResultsPage />}/>
-            <Route path="*" element={<NotFoundPage />}/>
-          </Route>
-        </Routes>
-      <Footer />
+      {signIn ? <Routes>
+        <Route path="/foundry-app/">
+          <Route path='' element={<Auth setSignIn={setSignIn} />}/>
+          <Route path="*" element={<NotFoundPage />}/>
+        </Route>
+      </Routes> :
+      <div>
+        <Header setSignIn={setSignIn}/>
+          <Routes>
+            <Route path="/foundry-app/">
+              <Route path='' element={<Main />}/>
+              <Route path="data" element={<DataPage />}/>
+              <Route path="results" element={<ResultsPage />}/>
+              <Route path="*" element={<NotFoundPage />}/>
+            </Route>
+          </Routes>
+        <Footer />
+      </div>
+      }
     </div>
   );
 }

@@ -54,7 +54,9 @@ function Header(prop: FunctionSetSignIn) {
                 >
                     <h4>{name}</h4>
                     <div className='btn-container'>
-                        <button onClick={() => {logOut(); prop.setSignIn(true)}}>Log Out</button>
+                        <NavLink key="index" to={"/foundry-app"}>
+                            <button onClick={() => {logOut(); prop.setSignIn(true)}}>Log Out</button>
+                        </NavLink>
                     </div>
                 </div>}
             </div>

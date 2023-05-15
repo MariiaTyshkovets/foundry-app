@@ -6,7 +6,7 @@ The application is designed to calculate the duration of hardening and cooling o
 
 HTML5, CSS, TypeScript, JS, React, hooks, Firebase. 
 
-You can open this project in your browser: [Foundry App](https://mariiatyshkovets.github.io/foundry_app/).
+You can open this project in your browser: [Foundry App](https://mariiatyshkovets.github.io/foundry-app/).
 
 ## About me
 

@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/foundry-app/static/css/main.755f5a02.css",
-    "main.js": "/foundry-app/static/js/main.9fc5143c.js",
+    "main.js": "/foundry-app/static/js/main.0a9914aa.js",
     "static/js/787.76e51f25.chunk.js": "/foundry-app/static/js/787.76e51f25.chunk.js",
     "static/media/foundry.jpg": "/foundry-app/static/media/foundry.3655fc941fd12184e258.jpg",
     "static/media/formulas3.jpg": "/foundry-app/static/media/formulas3.fb69e81b135a028c6619.jpg",
@@ -10,11 +10,11 @@
     "static/media/formula.jpg": "/foundry-app/static/media/formula.6bea368836b91fb9a4b7.jpg",
     "index.html": "/foundry-app/index.html",
     "main.755f5a02.css.map": "/foundry-app/static/css/main.755f5a02.css.map",
-    "main.9fc5143c.js.map": "/foundry-app/static/js/main.9fc5143c.js.map",
+    "main.0a9914aa.js.map": "/foundry-app/static/js/main.0a9914aa.js.map",
     "787.76e51f25.chunk.js.map": "/foundry-app/static/js/787.76e51f25.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.755f5a02.css",
-    "static/js/main.9fc5143c.js"
+    "static/js/main.0a9914aa.js"
   ]
 }

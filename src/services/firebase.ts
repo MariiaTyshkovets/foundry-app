@@ -37,12 +37,11 @@ export const signInWithGoogle = async () => {
 }
 
 export const logOut = (signInFunction: any) => {
-    const auth = getAuth();
     signOut(auth).then(() => {
         sessionStorage.removeItem("name");
         sessionStorage.removeItem("email");
         sessionStorage.removeItem("profilePic");
-        signInFunction(true);
+        signInFunction(false);
     }).catch((error) => {
         console.log(error)
     });

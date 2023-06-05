@@ -10,8 +10,8 @@ interface FunctionSetSignIn {
 function Header(prop: FunctionSetSignIn) {
 
     const [showUserInfo, setShowUserInfo] = useState(false);
-    const name : any = localStorage.getItem("name")?.replaceAll('"',"");
-    const img : any = localStorage.getItem("profilePic")?.replaceAll('"',"");
+    const name : any = sessionStorage.getItem("name")?.replaceAll('"',"");
+    const img : any = sessionStorage.getItem("profilePic")?.replaceAll('"',"");
 
     let activeStyle = {
         color: "orange"

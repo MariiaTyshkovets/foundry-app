@@ -31,7 +31,7 @@ function Header(prop: FunctionSetSignIn) {
                     </li>
                     <li>
                         <NavLink key="data" to={"/foundry-app/data"} style={({ isActive }) => isActive ?  activeStyle : undefined}>
-                            Довідкові дані
+                            Довідка
                         </NavLink>
                     </li>
                     <li>
@@ -55,7 +55,7 @@ function Header(prop: FunctionSetSignIn) {
                     <h4>{name}</h4>
                     <div className='btn-container'>
                         <NavLink key="index" to={"/foundry-app"}>
-                            <button onClick={() => {logOut(); prop.setSignIn(true)}}>Log Out</button>
+                            <button onClick={() => logOut(prop.setSignIn)}>Log Out</button>
                         </NavLink>
                     </div>
                 </div>}

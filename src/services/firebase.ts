@@ -1,5 +1,5 @@
 import { initializeApp } from 'firebase/app';
-import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
+import { GoogleAuthProvider, getAuth, signInWithPopup, signOut } from "firebase/auth";
 import { getFirestore } from 'firebase/firestore';
 
 // Your web app's Firebase configuration
@@ -36,10 +36,16 @@ export const signInWithGoogle = async () => {
         })
 }
 
-export const logOut = () => {
-    localStorage.removeItem("name");
-    localStorage.removeItem("email");
-    localStorage.removeItem("profilePic");
+export const logOut = (signInFunction: any) => {
+    const auth = getAuth();
+    signOut(auth).then(() => {
+        localStorage.removeItem("name");
+        localStorage.removeItem("email");
+        localStorage.removeItem("profilePic");
+        signInFunction(true);
+    }).catch((error) => {
+        console.log(error)
+    });
 }
 
 export default app;

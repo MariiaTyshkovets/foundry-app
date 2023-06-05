@@ -13,9 +13,9 @@ function App() {
   const [signIn, setSignIn] = useState(true);
 
   useEffect(() => {
-    let name = localStorage.getItem("name");
-    let email = localStorage.getItem("email");
-    let img = localStorage.getItem("profilePic");
+    let name = sessionStorage.getItem("name");
+    let email = sessionStorage.getItem("email");
+    let img = sessionStorage.getItem("profilePic");
 
     if (name !== null && email !== null && img !== null) {
       setSignIn(false);

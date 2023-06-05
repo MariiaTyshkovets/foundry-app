@@ -28,9 +28,9 @@ export const signInWithGoogle = async () => {
             const email = result.user.email;
             const profilePic = result.user.photoURL;
 
-            localStorage.setItem("name", JSON.stringify(name).replaceAll('"',""));
-            localStorage.setItem("email", JSON.stringify(email).replaceAll('"',""));
-            localStorage.setItem("profilePic", JSON.stringify(profilePic).replaceAll('"',""));
+            sessionStorage.setItem("name", JSON.stringify(name).replaceAll('"',""));
+            sessionStorage.setItem("email", JSON.stringify(email).replaceAll('"',""));
+            sessionStorage.setItem("profilePic", JSON.stringify(profilePic).replaceAll('"',""));
         }).catch((error) => {
             console.log(error);
         })
@@ -39,9 +39,9 @@ export const signInWithGoogle = async () => {
 export const logOut = (signInFunction: any) => {
     const auth = getAuth();
     signOut(auth).then(() => {
-        localStorage.removeItem("name");
-        localStorage.removeItem("email");
-        localStorage.removeItem("profilePic");
+        sessionStorage.removeItem("name");
+        sessionStorage.removeItem("email");
+        sessionStorage.removeItem("profilePic");
         signInFunction(true);
     }).catch((error) => {
         console.log(error)

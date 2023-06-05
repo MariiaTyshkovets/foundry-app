@@ -10,7 +10,7 @@ function Auth(prop: FunctionSetSignIn) {
   
   const signIn = async() => {
     await signInWithGoogle().then(() => {
-      localStorage.getItem("name") !== null && localStorage.getItem("email") !== null && localStorage.getItem("profilePic") !== null ? prop.setSignIn(false) : prop.setSignIn(true);
+      sessionStorage.getItem("name") !== null && sessionStorage.getItem("email") !== null && sessionStorage.getItem("profilePic") !== null ? prop.setSignIn(false) : prop.setSignIn(true);
     });
   }
 

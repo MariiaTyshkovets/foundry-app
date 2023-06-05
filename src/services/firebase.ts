@@ -41,7 +41,7 @@ export const logOut = (signInFunction: any) => {
         sessionStorage.removeItem("name");
         sessionStorage.removeItem("email");
         sessionStorage.removeItem("profilePic");
-        signInFunction(false);
+        signInFunction(true);
     }).catch((error) => {
         console.log(error)
     });
